@@ -1,0 +1,8 @@
+1. mov *fgdfgdfG , r1
+2. mov * , r1
+3. mov *fgdfgdfG r1
+4. mov *fgdfgdfG ,
+5. mov *fgdfgdfG
+6. mov #55
+7. mov #
+8. stop

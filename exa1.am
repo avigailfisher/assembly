@@ -1,0 +1,23 @@
+1. .entry MAIN
+2. .entry FIBONACCI
+3. .extern PRINT
+4. MAIN:   mov #10, r0
+5. jsr FIBONACCI
+6. stop
+7. prn r4
+8. lea PRINT, r4
+9. FIBONACCI: clr r1
+10. mov #1, r2
+11. clr r3
+12. clr r4
+13. jmp FIBLOOP
+14. FIBLOOP: cmp r3, r0
+15. bne ENDFIB
+16. prn r1
+17. add r1, r2
+18. mov r2, r4
+19. mov r4, r2
+20. sub r1, r2
+21. add #1, r3
+22. jmp FIBLOOP
+23. ENDFIB: rts

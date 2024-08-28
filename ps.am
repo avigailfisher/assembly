@@ -1,0 +1,22 @@
+1. .entry LIST
+2. .extern fn1
+3. MAIN: add r3, LIST
+4. jsr fn1
+5. LOOP: prn #48
+6. lea STR, r6
+7. inc r6
+8. mov *r6, L3
+9. sub r1, r4
+10. cmp r3, #-6
+11. bne END
+12. add r7, *r6
+13. clr K
+14. sub L3, L3
+15. .entry MAIN
+16. jmp LOOP
+17. END: stop
+18. STR: .string "abcd"
+19. LIST: .data 6, -9
+20. .data -100
+21. K: .data 31
+22. .extern L3
